@@ -8,7 +8,14 @@
 
 <p>
     <a href="{% url 'learning_logs:index' %}">学习笔记</a>-
-    <a href="{% url 'learning_logs:topics' %}">主题</a>
+    <a href="{% url 'learning_logs:topics' %}">主题</a>-
+    {% if user.is_authenticated %}
+      hello,{{ user.username }}.
+      <a href="{% url 'users:logout' %}">log out</a>
+    {% else %}
+      <a href="{% url 'users:login' %}">log in</a>-
+      <a href="{% url 'users:register' %}">register</a>
+    {% endif %}
 </p>
 
 {% block content %} {% endblock content %}

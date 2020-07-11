@@ -14,3 +14,11 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "learning_log.settings")
 
 application = get_wsgi_application()
+
+#部署到Heroku上的设置
+
+from django.core.wsgi import get_wsgi_application
+from dj_static import Cling
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "learning_log.settings")
+application = Cling(get_wsgi_application())

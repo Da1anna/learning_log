@@ -1,3 +1,4 @@
-db.sqlite3
-ll_env
-.idea
+.idea/
+ll_env/
+__pycache__/
+*.sqlite3

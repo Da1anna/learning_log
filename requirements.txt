@@ -9,4 +9,4 @@ pytz==2020.1
 sqlparse==0.3.1
 static3==0.6.1
 zipp==3.1.0
-psycopg2==2.6.1
+psycopg2>=2.6.1
